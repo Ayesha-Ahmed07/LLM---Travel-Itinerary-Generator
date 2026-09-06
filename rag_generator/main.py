@@ -1,14 +1,3 @@
-#!/usr/bin/env python3
-# main.py - PRODUCTION-GRADE SECURE RAG SYSTEM v4.1
-# ============================================================================
-# FIXES:
-# 1. APIStatusError handled with status-code-aware retry logic
-# 2. Rate-limit (429) → wait and retry
-# 3. Auth errors (401/403) → clear message, no retry
-# 4. Server errors (500/502/503) → retry with backoff
-# 5. All other APIStatusError subtypes → logged and shown clearly
-# ============================================================================
-
 import os, re, time, html, hashlib, logging, random, unicodedata, sys
 from typing import List, Dict, Tuple, Set, Any
 from collections import Counter
@@ -18,7 +7,7 @@ from langchain_groq import ChatGroq
 from langchain_community.vectorstores import FAISS
 from pathlib import Path
 
-# Try to import groq for specific error handling
+
 try:
     from groq import APIStatusError as GroqAPIStatusError
     from groq import RateLimitError, AuthenticationError, APIConnectionError
@@ -680,10 +669,6 @@ def print_quality_report(a):
         print(f"   {a['ft']} free time slots seems high — this city had enough places")
     print(f"  Score: {a['score']}/100")
     print("="*70+"\n")
-
-# ============================================================================
-# FIXED: API CALL WITH PROPER ERROR HANDLING
-# ============================================================================
 
 def invoke_llm_with_retry(prompt: str, max_attempts: int = 3):
     """
