@@ -1,7 +1,3 @@
-#!/usr/bin/env python3
-# encoding_secure_faiss.py - PRODUCTION-GRADE SECURE VERSION v2.2
-# All security vulnerabilities eliminated + TIMING COLUMN SUPPORT
-
 import os
 import re
 import hmac
@@ -410,7 +406,7 @@ def secure_file_operation(filepath: str, mode: str = 'r', encoding: str = 'utf-8
 
 
 # ============================================================================
-# DATA LOADING WITH COMPREHENSIVE VALIDATION - UPDATED
+# DATA LOADING WITH COMPREHENSIVE VALIDATION 
 # ============================================================================
 
 def load_and_clean_data(csv_path: str) -> pd.DataFrame:
@@ -525,7 +521,7 @@ def load_and_clean_data(csv_path: str) -> pd.DataFrame:
     return df
 
 # ============================================================================
-# DOCUMENT CREATION FROM DATAFRAME - UPDATED
+# DOCUMENT CREATION FROM DATAFRAME 
 # ============================================================================
 
 def create_documents(df: pd.DataFrame) -> List[Document]:
@@ -719,7 +715,7 @@ def set_readonly_permissions(path: str):
         print(f"   ⚠️  Warning: Could not harden permissions")
 
 # ============================================================================
-# RETRIEVAL TESTING - UPDATED WITH TIMING
+# RETRIEVAL TESTING 
 # ============================================================================
 
 def test_retrieval(vector_store):
