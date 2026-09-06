@@ -1,7 +1,3 @@
-#!/usr/bin/env python3
-# test_model.py - PRODUCTION-GRADE SECURITY TESTING SUITE
-# Comprehensive validation of all security measures
-
 import os
 import re
 import sys
