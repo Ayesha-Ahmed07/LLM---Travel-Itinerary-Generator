@@ -109,7 +109,6 @@ python main.py
 ## Author
 
 **Ayesha Ahmed**
-RAG-based Travel Recommendation System
 
 ---
 
