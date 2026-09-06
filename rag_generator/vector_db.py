@@ -1,21 +1,3 @@
-#!/usr/bin/env python3
-# main_perfect_timing.py - PRODUCTION-GRADE SECURE RAG SYSTEM v5.0
-# STRICT TIMING ENFORCEMENT - Python-level filtering (NOT relying on LLM)
-# ============================================================================
-# TIMING DEFINITIONS (STRICT):
-# ============================================================================
-# RESTAURANTS:
-#   Breakfast  (9:30 AM)  → tags: breakfast, brunch, meals, fullday
-#   Lunch      (2:00 PM)  → tags: lunch, brunch, mainmeals, fullday
-#   Dinner     (9:00 PM)  → tags: dinner, mainmeals, meals, fullday
-#
-# ATTRACTIONS:
-#   Morning    (10AM-1PM) → tags: morning, all-day, fullday
-#   Afternoon  (3PM-6PM)  → tags: afternoon, all-day, fullday
-#   Evening    (7:30PM)   → tags: evening, all-day, fullday
-#   Night      (9:30PM+)  → tags: night, all-day, fullday
-# ============================================================================
-
 import os
 import re
 import time
