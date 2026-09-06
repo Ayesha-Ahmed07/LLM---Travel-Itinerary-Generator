@@ -1,7 +1,3 @@
-#!/usr/bin/env python3
-# load_model.py - PRODUCTION-GRADE SECURE VERSION
-# Comprehensive security with API key protection
-
 import os
 import re
 import sys
